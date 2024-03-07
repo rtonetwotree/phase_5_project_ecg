@@ -25,8 +25,17 @@ The LSTM is already well-suited to train on time-series data.
 
 I isitially started with a much simpler non-time-series model to predict heart status, using a different dataset, but eventually progressed to time series modelling. Initially I was using tsfresh
 to extract features from the timeseries, followed by several different models built on PCA performed on those extracted features. Some of these models performed decently but it wasn't until I
-moved to neural networks that I was able to attain my best results. My best model is a hyperparameter tuned neural network with one bidirectional LSTM layer and two Dense layers with Dropout layers inbetween. More complex models were sucessfully created, but they performed on par with the model just described. These models required the keras-tuner package, which is useful for neural network model
-creation and has useful hyperparamater tuning methods.
+moved to neural networks that I was able to attain my best results. My best model is a hyperparameter tuned neural network with one bidirectional LSTM layer and two Dense layers with Dropout layers
+inbetween each. More complex models were sucessfully created, but they performed on par with the model just described. These models required the keras-tuner package, which is useful for neural network 
+modelcreation and has useful hyperparamater tuning methods.
+
+This model can be found in the notebook titled time_series_neural_network.ipynb in the "notebooks" folder on this GitHub page, and is
+designed to be run on Google Collab because of the high levels of computing power required to train the neural network. If you load 
+the database "mitbih_train.csv" into your Google Drive folder on the main level, Google collab should be able to read the database
+in the notebook and fully run the code yourself.
+
+The rest of the notebooks can be run locally, with the appropriate databases (mainly "mitbih_train.csv") loaded into the "data" folder
+locally.  
 
 ### Evaluation
 
